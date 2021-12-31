@@ -19,8 +19,15 @@ body button {
   cursor: pointer;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
+}
+
+a:focus,
+a:visited,
+a:active {
+  outline: none;
 }
 
 .header {

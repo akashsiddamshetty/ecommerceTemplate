@@ -1,20 +1,26 @@
-body{
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px;
-    a{
-        text-decoration: none;
-        color: $Dark-grayish-blue;
-        -webkit-tap-highlight-color: transparent;
-        cursor: pointer;
-    }
-    P {
-        color: $Dark-grayish-blue;
-      }
-    button{
-        cursor: pointer;
-    }
+body {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  a {
+    text-decoration: none;
+    color: $Dark-grayish-blue;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+  P {
+    color: $Dark-grayish-blue;
+  }
+  button {
+    cursor: pointer;
+  }
 }
-body,html{
-    overflow-x: hidden;
+body,
+html {
+  overflow-x: hidden;
+}
+a:focus,
+a:visited,
+a:active {
+  outline: none;
 }

@@ -18,6 +18,10 @@ body button {
   cursor: pointer;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

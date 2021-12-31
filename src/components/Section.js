@@ -4,10 +4,10 @@ import cartimg from './images/icon-cart.svg';
 import iconplus from './images/icon-plus.svg';
 import iconminus from './images/icon-minus.svg';
 import image1 from "./images/image-product-1.jpg";
-import imagethumbnail1 from "https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/image-product-1-thumbnail.jpg";
-import imagethumbnail2 from "https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/image-product-2-thumbnail.jpg";
-import imagethumbnail3 from "https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/image-product-3-thumbnail.jpg";
-import imagethumbnail4 from "https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/image-product-4-thumbnail.jpg";
+import imagethumbnail1 from "./images/image-product-1-thumbnail.jpg";
+import imagethumbnail2 from "./images/image-product-2-thumbnail.jpg";
+import imagethumbnail3 from "./images/image-product-3-thumbnail.jpg";
+import imagethumbnail4 from "./images/image-product-4-thumbnail.jpg";
 
 const Section = (props) => {
 

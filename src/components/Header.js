@@ -1,13 +1,13 @@
 import React from 'react'
 import Container from '@mui/material/Container';
-import logo from 'https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/logo.svg';
-import cartimg from 'https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/icon-cart.svg';
-import avatar from 'https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/image-avatar.png';
-import iconmenu from 'https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/icon-menu.svg';
-import iconclose from 'https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/icon-close.svg';
+import logo from './images/logo.svg';
+import cartimg from './images/icon-cart.svg';
+import avatar from './images/image-avatar.png';
+import iconmenu from './images/icon-menu.svg';
+import iconclose from './images/icon-close.svg';
 import { Drawer, Box } from '@material-ui/core';
-import imagethumbnail1 from "https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/image-product-1-thumbnail.jpg";
-import deleteicon from 'https://github.com/akashsiddamshetty/ecommerceTemplate/blob/main/src/components/images/icon-delete.svg';
+import imagethumbnail1 from "./images/image-product-1-thumbnail.jpg";
+import deleteicon from './images/icon-delete.svg';
 const Header = (props) => {
     const [state, setState] = React.useState(false);
     const toggleDrawer = (open) => (event) => {

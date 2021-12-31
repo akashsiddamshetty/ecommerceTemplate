@@ -5,6 +5,7 @@ body{
     a{
         text-decoration: none;
         color: $Dark-grayish-blue;
+        -webkit-tap-highlight-color: transparent;
         cursor: pointer;
     }
     P {

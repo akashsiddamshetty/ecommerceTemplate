@@ -1,0 +1,153 @@
+.section {
+  padding-top: 40px;
+  padding-right: 80px;
+  padding-left: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  &-divA {
+    img {
+      height: 360px;
+      width: 350px;
+      border-radius: 10px;
+      @include breakpoint-down(small) {
+        border-radius: 0;
+        width: 110%;
+        height: 300px;
+        left: -5%;
+        position: relative;
+      }
+    }
+    &-thumbnail {
+      padding-top: 20px;
+      height: 50px;
+      img {
+        height: 70px;
+        width: 70px;
+        &:not(:last-child) {
+          margin-right: 23px;
+        }
+      }
+      @include breakpoint-down(small) {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  &-divB {
+    width: 500px;
+    padding-left: 20px;
+    align-self: center;
+    @include breakpoint-down(small) {
+      width: 100%;
+      padding: 0px;
+    }
+    h3 {
+      color: $Orange;
+    }
+    
+    h1 {
+      padding-bottom: 0px;
+    }
+    span {
+      font-size: 14px;
+      color: $Orange;
+      background: $Pale-orange;
+    }
+    button {
+      background: $Orange;
+      color: $White;
+      border: none;
+      border-radius: 5px;
+      height: 40px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        padding-right: 10px;
+      }
+    }
+    &-price {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+      width: 190px;
+
+      h1 {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          padding-left: 10px;
+        }
+      }
+      p {
+        padding-left: 2px;
+        margin: 0px;
+      }
+      @include breakpoint-down(small) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        p {
+          margin-top: 20px;
+          align-items: center;
+          align-content: center;
+          padding-right: 10px;
+        }
+      }
+    }
+    &-buttonDiv {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px;
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
+    }
+    &-counter {
+      height: 20px;
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include breakpoint-down(small) {
+        width: 100%;
+        padding-bottom: 25px;
+        padding-top: 15px;
+      }
+      button {
+        padding: 0px;
+        background: none;
+        border: none;
+        @include breakpoint-down(small) {
+          width: 100%;
+          img {
+            padding: 0;
+          }
+        }
+        &:not(:first-child) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

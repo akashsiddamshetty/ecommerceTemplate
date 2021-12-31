@@ -1,0 +1,237 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px $Grayish-blue;
+
+  @include breakpoint-down(small) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: none;
+  }
+  &-drawer {
+    width: 230px;
+
+    button {
+      background: none;
+      border: none;
+      width: 10px;
+      height: 10px;
+      padding: 0px;
+      margin-bottom: 40px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      padding-left: 22px;
+
+      a {
+        color: $Black;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  &-divA {
+    width: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint-down(small) {
+      width: 180px;
+    }
+
+    .button {
+      border: none;
+      background: none;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      padding: 0px;
+      &:hover {
+        cursor: pointer;
+      }
+      @include breakpoint-down(small) {
+        visibility: visible;
+        padding: 5px;
+        margin-right: 25px;
+      }
+    }
+
+    &-menu {
+      a {
+        position: relative;
+        align-items: center;
+        transition: color 300ms ease-in-out;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 5px;
+          left: 0;
+          right: 0;
+          bottom: -47px;
+          background: $Orange;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out;
+        }
+        &:hover {
+          color: $Black;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      @include breakpoint-down(small) {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+  &-divB {
+    display: flex;
+    align-items: center;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    &-cart {
+      height: 20px;
+      width: 20px;
+      margin-right: 40px;
+      &-counterenabled {
+        z-index: 1;
+        position: absolute;
+        background: #ff7d1a;
+        height: 17px;
+        width: 21px;
+        padding: 0px;
+        border-radius: 25px;
+        margin-left: 8px;
+        margin-top: -8px;
+        color: $White;
+      }
+      &-counterdisabled {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+      }
+      @include breakpoint-down(small) {
+        margin-right: 20px;
+      }
+    }
+    &-cartopen {
+      position: absolute;
+      height: 200px;
+      width: 350px;
+      top: 70px;
+      right: 40px;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 2px 2px 15px 0px $Grayish-blue;
+      z-index: 1;
+      h3 {
+        color: $Black;
+        padding-left: 20px;
+        padding-top: 0px;
+        margin-top: 10px;
+        padding-bottom: 15px;
+        box-shadow: 0px 1px 0px 0px $Grayish-blue;
+      }
+      &-showcontent {
+        &-cantent {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding-left: 10px;
+          padding-right: 10px;
+          &-productimg {
+            img {
+              height: 50px;
+              width: 50px;
+              border-radius: 4px;
+            }
+          }
+          button {
+            img {
+              height: 20px;
+              width: 15px;
+            }
+          }
+          p {
+            margin: 0px;
+            padding-bottom: 10px;
+            font-size: 14px;
+            span {
+              color: $Black;
+              font-weight: bold;
+            }
+          }
+        }
+        &-checkout {
+          button {
+            background: $Orange;
+            color: $White;
+            margin-left: 20px;
+            margin-top: 10px;
+            width: 305px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: bold;
+          }
+        }
+      }
+      &-showcontent1 {
+        margin-left: 95px;
+        margin-top: 40px;
+      }
+      &-hidecontent {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+
+      @include breakpoint-down(small) {
+        top: 80px;
+        right: 10px;
+      }
+    }
+    &-cartclosed {
+      height: 0px;
+      width: 0px;
+      visibility: hidden;
+      float: right;
+    }
+    &-avatar {
+      height: 50px;
+      width: 50px;
+      @include breakpoint-down(small) {
+        height: 25px;
+        width: 25px;
+      }
+      &:hover {
+        border: 2px $Orange solid;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        @include breakpoint-down(small) {
+          height: 21px;
+          width: 21px;
+        }
+      }
+    }
+  }
+}

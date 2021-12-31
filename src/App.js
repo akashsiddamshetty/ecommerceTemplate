@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/css/css.css'
+import React from 'react';
+import { Component } from 'react';
+import Header from "./components/Header";
+import Section from "./components/Section";
+class App extends Component {
+  state = {
+    counter: 0,
+    title: "Fall Limited Edition Sneakers",
+    price: 125.00,
+    addtocart: false
+  };
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  plus = e => {
+    const counter = this.state.counter;
+    this.setState({ counter: counter + 1 });
+  };
+  minus = e => {
+    const counter = this.state.counter;
+    this.setState({ counter: counter - 1 });
+  };
+  addToCart = () => {
+    this.setState({
+      addtocart: !this.state.addtocart
+    });
+  };
+  removeFromCart = () => {
+    this.setState({
+      addtocart: !this.state.addtocart
+    });
+  };
+  render() {
+    return (
+      <>
+        <Header
+          title={this.state.title}
+          price={this.state.price}
+          counter={this.state.counter}
+          addtocart={this.state.addtocart}
+          removeFromCart={this.removeFromCart}
+           />
+        <Section
+          plus={this.plus}
+          minus={this.minus}
+          counter={this.state.counter}
+          title={this.state.title}
+          price={this.state.price}
+          addToCart={this.addToCart}
+        />
+      </>
+    );
+  }
 }
 
 export default App;

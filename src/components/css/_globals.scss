@@ -1,0 +1,16 @@
+body{
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    a{
+        text-decoration: none;
+        color: $Dark-grayish-blue;
+        cursor: pointer;
+    }
+    P {
+        color: $Dark-grayish-blue;
+      }
+    button{
+        cursor: pointer;
+    }
+}

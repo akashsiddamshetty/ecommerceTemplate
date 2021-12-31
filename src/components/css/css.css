@@ -11,23 +11,27 @@ body a {
   cursor: pointer;
 }
 
+body a:focus,
+body a:visited,
+body a:active,
+body button:active,
+body button:visited,
+body button:focus {
+  outline: none;
+}
+
 body P {
   color: #68707d;
 }
 
 body button {
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }
 
 body,
 html {
   overflow-x: hidden;
-}
-
-a:focus,
-a:visited,
-a:active {
-  outline: none;
 }
 
 .header {

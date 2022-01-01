@@ -142,7 +142,7 @@
       border-radius: 10px;
       background: white;
       box-shadow: 2px 2px 15px 0px $Grayish-blue;
-      z-index: 1;
+      z-index: 2;
       h3 {
         color: $Black;
         padding-left: 20px;
@@ -206,7 +206,7 @@
 
       @include breakpoint-down(small) {
         top: 80px;
-        right: 10px;
+        right: 5px;
       }
     }
     &-cartclosed {

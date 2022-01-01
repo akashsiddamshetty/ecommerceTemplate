@@ -13,7 +13,7 @@ const Header = (props) => {
     const toggleDrawer = (open) => (event) => {
         setState(open)
     }
-    const [cart, setCart] = React.useState(false);
+    // const [cart, setCart] = React.useState(false);
 
     const menu = [{
         text: "Collection",
@@ -81,7 +81,7 @@ const Header = (props) => {
                 <div className="header-divB">
 
                     <button
-                        onClick={!cart ? () => setCart(true) : () => setCart(false)}
+                        onClick={props.openCart}
                     >
                         <div className={props.addtocart ? 'header-divB-cart-counterenabled' : 'header-divB-cart-counterdisabled'}>
                             {props.counter}
@@ -89,7 +89,7 @@ const Header = (props) => {
                         <img className="header-divB-cart" src={cartimg} alt="cart" />
                     </button>
 
-                    <div className={cart ? "header-divB-cartopen" : "header-divB-cartclosed"}>
+                    <div className={props.cart ? "header-divB-cartopen" : "header-divB-cartclosed"}>
                         <h3>Cart</h3>
                         <div className={props.addtocart ? 'header-divB-cartopen-showcontent' : 'header-divB-cartopen-hidecontent'}>
                             <div className='header-divB-cartopen-showcontent-cantent'>
@@ -111,7 +111,7 @@ const Header = (props) => {
                                 </button>
                             </div>
                         </div>
-                        <div className={props.addtocart?'header-divB-cartopen-hidecontent':'header-divB-cartopen-showcontent1'}>
+                        <div className={props.addtocart ? 'header-divB-cartopen-hidecontent' : 'header-divB-cartopen-showcontent1'}>
                             <p>Your cart is empty</p>
                         </div>
                     </div>

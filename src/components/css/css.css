@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   padding: 0px;
   margin: 0px;
 }
@@ -235,7 +234,7 @@ html {
   background: white;
   -webkit-box-shadow: 2px 2px 15px 0px #b6bcc8;
           box-shadow: 2px 2px 15px 0px #b6bcc8;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header-divB-cartopen h3 {
@@ -308,7 +307,7 @@ html {
 @media (max-width: 49.9375em) {
   .header-divB-cartopen {
     top: 80px;
-    right: 10px;
+    right: 5px;
   }
 }
 
@@ -357,6 +356,13 @@ html {
           justify-content: space-between;
 }
 
+@media (max-width: 56.25em) {
+  .section {
+    padding-left: 0px;
+    padding-right: 30px;
+  }
+}
+
 @media (max-width: 49.9375em) {
   .section {
     -webkit-box-orient: vertical;
@@ -367,43 +373,76 @@ html {
   }
 }
 
+.section-divA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 360px;
+  margin-top: 26px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-divA button {
+  background: white;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+}
+
 .section-divA img {
+  height: 15px;
+  width: 10px;
+}
+
+@media (max-width: 49.9375em) {
+  .section-divA img {
+    height: 10px;
+    width: 8px;
+  }
+}
+
+@media (max-width: 49.9375em) {
+  .section-divA {
+    width: 100%;
+    margin-top: 0px;
+    height: 300px;
+  }
+}
+
+.section-divA-pdtimgcontainer {
+  height: 360px;
+  width: 350px;
+  overflow: hidden;
+}
+
+@media (max-width: 49.9375em) {
+  .section-divA-pdtimgcontainer {
+    overflow: visible;
+    height: 300px;
+  }
+}
+
+.section-divA-pdtimgcontainer img {
   height: 360px;
   width: 350px;
   border-radius: 10px;
 }
 
 @media (max-width: 49.9375em) {
-  .section-divA img {
+  .section-divA-pdtimgcontainer img {
     border-radius: 0;
-    width: 110%;
+    width: 130%;
     height: 300px;
-    left: -5%;
+    left: -15%;
     position: relative;
-  }
-}
-
-.section-divA-thumbnail {
-  padding-top: 20px;
-  height: 50px;
-}
-
-.section-divA-thumbnail img {
-  height: 70px;
-  width: 70px;
-}
-
-.section-divA-thumbnail img:not(:last-child) {
-  margin-right: 23px;
-}
-
-@media (max-width: 49.9375em) {
-  .section-divA-thumbnail {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    padding: 0;
-    margin: 0;
   }
 }
 

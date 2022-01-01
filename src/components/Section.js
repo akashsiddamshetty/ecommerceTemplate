@@ -1,44 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '@mui/material/Container';
 import cartimg from './images/icon-cart.svg';
 import iconplus from './images/icon-plus.svg';
 import iconminus from './images/icon-minus.svg';
-import image1 from "./images/image-product-1.jpg";
-import imagethumbnail1 from "./images/image-product-1-thumbnail.jpg";
-import imagethumbnail2 from "./images/image-product-2-thumbnail.jpg";
-import imagethumbnail3 from "./images/image-product-3-thumbnail.jpg";
-import imagethumbnail4 from "./images/image-product-4-thumbnail.jpg";
+import iconnext from './images/icon-next.svg';
+import iconprev from './images/icon-previous.svg';
+import productimg1 from "./images/image-product-1.jpg";
+import productimg2 from "./images/image-product-2.jpg";
+import productimg3 from "./images/image-product-3.jpg";
+import productimg4 from "./images/image-product-4.jpg";
 
 const Section = (props) => {
 
-    const thumbnails = [
+    const [activeimg, setActiveimg] = useState(0);
+    const next = () => {
+        let step = activeimg;
+        setActiveimg(++step)
+    }
+    const prev = () => {
+        let step = activeimg;
+        setActiveimg(--step)
+    }
+    const productimages = [
         {
-            img: imagethumbnail1
+            img: productimg1
         },
         {
-            img: imagethumbnail2
+            img: productimg2
         },
         {
-            img: imagethumbnail3
+            img: productimg3
         },
         {
-            img: imagethumbnail4
+            img: productimg4
         }
     ]
+    let allproductimages = productimages;
+    const getContent = () => {
+        let data = allproductimages[activeimg];
+        return (
+            <div>
+                <img src={data.img} alt={data.img} />
+            </div>
+        )
+    }
     return (
         <Container>
-            <div className='section'>
+            <div className='section' onClick={props.closeCart}>
                 <div className='section-divA'>
-                    <img src={image1} alt='image1' />
-                    <div className='section-divA-thumbnail'>
-                        {thumbnails.map((item, i) => {
-                            const { img } = item;
-                            return (
-                                <img key={i} src={img} alt='product 1' />
-                            )
-                        })}
-
+                    <button onClick={() => prev()} disabled={activeimg === 0}>
+                        <img src={iconprev} alt='prev' />
+                    </button>
+                    <div className='section-divA-pdtimgcontainer'>
+                        {getContent()}
                     </div>
+                    <button onClick={() => next()} disabled={activeimg === allproductimages.length - 1}>
+                        <img src={iconnext} alt='next' />
+                    </button>
                 </div>
                 <div className='section-divB'>
                     <h3>SNEAKER COMPANY</h3>
@@ -74,7 +92,7 @@ const Section = (props) => {
                     </div>
                 </div>
             </div>
-        </Container>
+        </Container >
     )
 }
 

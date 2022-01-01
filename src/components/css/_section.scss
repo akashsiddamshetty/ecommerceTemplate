@@ -4,43 +4,83 @@
   padding-left: 80px;
   display: flex;
   justify-content: space-between;
-
+  @include breakpoint-down(medium) {
+    padding-left: 0px;
+    padding-right: 30px;
+  }
   @include breakpoint-down(small) {
     flex-direction: column;
     padding: 0;
   }
 
   &-divA {
+    display: flex;
+    height: 360px;
+    margin-top: 26px;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      background: $White;
+      padding: 0;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: none;
+      z-index: 1;
+    }
     img {
+      height: 15px;
+      width: 10px;
+      @include breakpoint-down(small) {
+        height: 10px;
+        width: 8px;
+      }
+    }
+    @include breakpoint-down(small) {
+      width: 100%;
+      margin-top: 0px;
+      height: 300px;
+    }
+    &-pdtimgcontainer {
       height: 360px;
       width: 350px;
-      border-radius: 10px;
+      overflow: hidden;
       @include breakpoint-down(small) {
-        border-radius: 0;
-        width: 110%;
+        overflow: visible;
         height: 300px;
-        left: -5%;
-        position: relative;
       }
-    }
-    &-thumbnail {
-      padding-top: 20px;
-      height: 50px;
       img {
-        height: 70px;
-        width: 70px;
-        &:not(:last-child) {
-          margin-right: 23px;
+        height: 360px;
+        width: 350px;
+        border-radius: 10px;
+        @include breakpoint-down(small) {
+          border-radius: 0;
+          width: 130%;
+          height: 300px;
+          left: -15%;
+          position: relative;
         }
       }
-      @include breakpoint-down(small) {
-        height: 0;
-        width: 0;
-        visibility: hidden;
-        padding: 0;
-        margin: 0;
-      }
     }
+
+    // &-thumbnail {
+    //   padding-top: 20px;
+    //   height: 50px;
+    //   img {
+    //     height: 70px;
+    //     width: 70px;
+    //     &:not(:last-child) {
+    //       margin-right: 23px;
+    //     }
+    //   }
+    //   @include breakpoint-down(small) {
+    //     height: 0;
+    //     width: 0;
+    //     visibility: hidden;
+    //     padding: 0;
+    //     margin: 0;
+    //   }
+    // }
   }
   &-divB {
     width: 500px;
@@ -53,7 +93,7 @@
     h3 {
       color: $Orange;
     }
-    
+
     h1 {
       padding-bottom: 0px;
     }

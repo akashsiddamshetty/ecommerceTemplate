@@ -374,27 +374,11 @@ html {
 }
 
 .section-divA {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 360px;
-  margin-top: 26px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.section-divA button {
-  background: white;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: none;
-  z-index: 1;
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .section-divA img {
@@ -411,9 +395,30 @@ html {
 
 @media (max-width: 49.9375em) {
   .section-divA {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 360px;
+    margin-top: 26px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     margin-top: 0px;
     height: 300px;
+  }
+  .section-divA button {
+    background: white;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
   }
 }
 
@@ -625,5 +630,52 @@ html {
 
 .section-divB-counter button:not(:first-child) {
   padding-left: 10px;
+}
+
+.imageswiththumbnail {
+  height: 460px;
+  margin-top: 26px;
+}
+
+.imageswiththumbnail img {
+  height: 360px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.imageswiththumbnail-thumbnail {
+  padding-top: 20px;
+  height: 70px;
+}
+
+.imageswiththumbnail-thumbnail img {
+  height: 70px;
+  width: 70px;
+  margin-right: 23px;
+}
+
+.imageswiththumbnail-thumbnail button {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  all: unset;
+}
+
+@media (max-width: 49.9375em) {
+  .imageswiththumbnail-thumbnail {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 49.9375em) {
+  .imageswiththumbnail {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
 }
 /*# sourceMappingURL=css.css.map */

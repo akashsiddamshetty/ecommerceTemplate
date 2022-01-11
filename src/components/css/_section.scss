@@ -14,20 +14,11 @@
   }
 
   &-divA {
-    display: flex;
-    height: 360px;
-    margin-top: 26px;
-    justify-content: space-between;
-    align-items: center;
-    button {
-      background: $White;
-      padding: 0;
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
-      border: none;
-      z-index: 1;
-    }
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
     img {
       height: 15px;
       width: 10px;
@@ -37,6 +28,21 @@
       }
     }
     @include breakpoint-down(small) {
+      visibility: visible;
+      display: flex;
+      height: 360px;
+      margin-top: 26px;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        background: $White;
+        padding: 0;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: none;
+        z-index: 1;
+      }
       width: 100%;
       margin-top: 0px;
       height: 300px;
@@ -62,25 +68,6 @@
         }
       }
     }
-
-    // &-thumbnail {
-    //   padding-top: 20px;
-    //   height: 50px;
-    //   img {
-    //     height: 70px;
-    //     width: 70px;
-    //     &:not(:last-child) {
-    //       margin-right: 23px;
-    //     }
-    //   }
-    //   @include breakpoint-down(small) {
-    //     height: 0;
-    //     width: 0;
-    //     visibility: hidden;
-    //     padding: 0;
-    //     margin: 0;
-    //   }
-    // }
   }
   &-divB {
     width: 500px;
@@ -190,5 +177,42 @@
         }
       }
     }
+  }
+}
+
+.imageswiththumbnail {
+  height: 460px;
+  margin-top: 26px;
+  img {
+    height: 360px;
+    width: 350px;
+    border-radius: 10px;
+  }
+  &-thumbnail {
+    padding-top: 20px;
+    height: 70px;
+    img {
+      height: 70px;
+      width: 70px;
+      margin-right: 23px;
+    }
+    button {
+      border: none;
+      padding: 0px;
+      margin: 0px;
+      all: unset;
+    }
+    @include breakpoint-down(small) {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  @include breakpoint-down(small) {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
   }
 }

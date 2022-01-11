@@ -9,7 +9,7 @@ import productimg1 from "./images/image-product-1.jpg";
 import productimg2 from "./images/image-product-2.jpg";
 import productimg3 from "./images/image-product-3.jpg";
 import productimg4 from "./images/image-product-4.jpg";
-
+import Imageswiththumbnails from './largescreen/Imageswiththumbnails';
 const Section = (props) => {
 
     const [activeimg, setActiveimg] = useState(0);
@@ -58,6 +58,7 @@ const Section = (props) => {
                         <img src={iconnext} alt='next' />
                     </button>
                 </div>
+                <Imageswiththumbnails />
                 <div className='section-divB'>
                     <h3>SNEAKER COMPANY</h3>
                     <h1>{props.title}</h1>

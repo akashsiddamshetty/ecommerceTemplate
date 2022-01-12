@@ -21,11 +21,11 @@ Users should be able to:
 - View the cart and remove items from it
 
 ### Screenshot
-1. ![desktop] (./ss/Screenshot 2022-01-12 at 13-11-43 Ecommerce.png)
-2. ![lightbox gallery](./ss/Screenshot 2022-01-12 at 13-13-59 Ecommerce.png)
-3. ![Add item to the cart desktop](./ss/Screenshot 2022-01-12 at 13-18-47 Ecommerce.png)
-4. ![mobile first](./ss/Screenshot 2022-01-12 at 13-17-10 Ecommerce.png)
-5. ![mobile cart] (./ss/Screenshot 2022-01-12 at 13-19-18 Ecommerce.png)
+![desktop] (./ss/Screenshot 2022-01-12 at 13-11-43 Ecommerce.png)
+![lightbox gallery](./ss/Screenshot 2022-01-12 at 13-13-59 Ecommerce.png)
+![Add item to the cart desktop](./ss/Screenshot 2022-01-12 at 13-18-47 Ecommerce.png)
+![mobile first](./ss/Screenshot 2022-01-12 at 13-17-10 Ecommerce.png)
+![mobile cart] (./ss/Screenshot 2022-01-12 at 13-19-18 Ecommerce.png)
 
 ### Links
 

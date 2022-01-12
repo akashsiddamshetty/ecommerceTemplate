@@ -183,6 +183,9 @@
 .imageswiththumbnail {
   height: 460px;
   margin-top: 26px;
+  button {
+    all: unset;
+  }
   img {
     height: 360px;
     width: 350px;
@@ -191,16 +194,26 @@
   &-thumbnail {
     padding-top: 20px;
     height: 70px;
-    img {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      all: unset;
       height: 70px;
       width: 70px;
-      margin-right: 23px;
-    }
-    button {
-      border: none;
-      padding: 0px;
-      margin: 0px;
-      all: unset;
+      &:focus {
+        border: 2px solid $Orange;
+        border-radius: 12px;
+      }
+      img {
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+        &:hover {
+          filter: contrast(50%);
+        }
+      }
     }
     @include breakpoint-down(small) {
       height: 0;
@@ -214,5 +227,83 @@
     visibility: hidden;
     width: 0px;
     height: 0px;
+  }
+}
+
+.previmages {
+  margin-top: 26px;
+  width: 450px;
+  height: 550px;
+  margin-top: 40px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  &-closeicon {
+    float: left;
+    button {
+      all: unset;
+      cursor: pointer;
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-left: 431px;
+        margin-bottom: 8px;
+        &:hover path {
+          fill: $Orange;
+        }
+      }
+    }
+  }
+  &-buttonscontainer {
+    display: flex;
+    align-items: center;
+    width: 490px;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 220px;
+    z-index: 1;
+    button {
+      height: 40px;
+      width: 40px;
+      border: none;
+      background-color: white;
+      border-radius: 50%;
+      svg {
+        &:hover path {
+          fill: $Orange;
+        }
+      }
+    }
+  }
+  img {
+    height: 430px;
+    width: 450px;
+    border-radius: 10px;
+  }
+  &-thumbnail {
+    padding-top: 20px;
+    height: 70px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      height: 70px;
+      width: 70px;
+      &:hover {
+        filter: contrast(50%);
+      }
+    }
+
+    button {
+      border: none;
+      padding: 0px;
+      margin: 0px;
+      all: unset;
+      height: 70px;
+      &:focus {
+        border: 2px solid $Orange;
+        border-radius: 10px;
+      }
+    }
   }
 }

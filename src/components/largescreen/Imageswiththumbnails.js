@@ -8,10 +8,10 @@ import thumbnailimg2 from '../images/image-product-2-thumbnail.jpg'
 import thumbnailimg3 from '../images/image-product-3-thumbnail.jpg'
 import thumbnailimg4 from '../images/image-product-4-thumbnail.jpg'
 import { Menu, MenuItem } from "semantic-ui-react";
-
+import Prevproductmodal from '../modal/Prevproductmodal';
 const Imageswiththumbnails = () => {
     const storedValueAsNumber = Number(localStorage.getItem("state"));
-    const [state, setState] = React.useState(Number.isInteger(storedValueAsNumber) ? storedValueAsNumber : 0);
+    const [state, setState] = React.useState(Number.isInteger(storedValueAsNumber) ? storedValueAsNumber : 0)
     const handleSelectedThumbnail = (e, { id: selectedThumbnail }) => {
         setState(selectedThumbnail);
     };
@@ -19,6 +19,9 @@ const Imageswiththumbnails = () => {
         localStorage.setItem("state", String(state))
     }, [state])
 
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     const productimages = [
         {
             img: productimg1
@@ -36,7 +39,11 @@ const Imageswiththumbnails = () => {
     return (
         <>
             <div className='imageswiththumbnail'>
-                <img src={productimages[state].img} alt='product' />
+                <button
+                    onClick={handleOpen}
+                >
+                    <img src={productimages[state].img} alt='product' />
+                </button>
                 <Menu className='imageswiththumbnail-thumbnail'>
                     <Menu.Item
                         id={0}
@@ -76,6 +83,8 @@ const Imageswiththumbnails = () => {
                     </MenuItem>
                 </Menu>
             </div>
+            <Prevproductmodal open={open} handleClose={handleClose} />
+
         </>
     )
 }

@@ -9,8 +9,6 @@ import thumbnailimg1 from '../images/image-product-1-thumbnail.jpg'
 import thumbnailimg2 from '../images/image-product-2-thumbnail.jpg'
 import thumbnailimg3 from '../images/image-product-3-thumbnail.jpg'
 import thumbnailimg4 from '../images/image-product-4-thumbnail.jpg'
-import iconnext from '../images/icon-next.svg';
-import iconprev from '../images/icon-previous.svg';
 import { Menu, MenuItem } from "semantic-ui-react";
 const style = {
     position: 'absolute',

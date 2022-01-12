@@ -40,7 +40,6 @@ Users should be able to:
 - CSS custom properties
 - Scss
 - Flexbox
-- CSS Grid
 - material ui
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library

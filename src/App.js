@@ -58,6 +58,7 @@ class App extends Component {
           removeFromCart={this.removeFromCart}
           openCart={this.openCart}
           cart={this.state.cart}
+          role="header"
         />
         <Routes>
 
@@ -72,15 +73,15 @@ class App extends Component {
                 price={this.state.price}
                 addToCart={this.addToCart}
                 closeCart={this.closeCart}
-
+                role='main'
               />
             }
           />
-          <Route path='/Collection' element={<Collection/>}/>
-          <Route path='/Men' element={<Men/>}/>
-          <Route path='/Women' element={<Women/>}/>
-          <Route path='/About' element={<About/>}/>
-          <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/Collection' element={<Collection role="collection" />} />
+          <Route path='/Men' element={<Men role="collection" />} />
+          <Route path='/Women' element={<Women role="collection" />} />
+          <Route path='/About' element={<About role="collection" />} />
+          <Route path='/Contact' element={<Contact role="collection" />} />
 
         </Routes>
       </>

@@ -83,9 +83,9 @@ const Header = (props) => {
                     <button
                         onClick={props.openCart}
                     >
-                        <div className={props.addtocart ? 'header-divB-cart-counterenabled' : 'header-divB-cart-counterdisabled'}>
+                        <span className={props.addtocart ? 'header-divB-cart-counterenabled' : 'header-divB-cart-counterdisabled'}>
                             {props.counter}
-                        </div>
+                        </span>
                         <img className="header-divB-cart" src={cartimg} alt="cart" />
                     </button>
 
